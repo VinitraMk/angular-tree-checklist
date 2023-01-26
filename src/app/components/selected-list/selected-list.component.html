@@ -1,0 +1,12 @@
+<ul style="list-style-type: none">
+  <li *ngFor="let item of selectionList">
+    <ng-container *ngIf="item.checked">
+      <input
+        type="checkbox"
+        [checked]="item.checked"
+        (change)="handleChange(item)"
+      />
+      <label>{{item.item}}</label>
+    </ng-container>
+  </li>
+</ul>

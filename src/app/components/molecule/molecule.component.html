@@ -1,0 +1,9 @@
+<app-tree
+(onCheckboxChange)="handleCheckboxChange($event)"
+  [flatNodes]="nodes"
+  ></app-tree>
+<selected-list
+[selectionList]="nodes"
+  (onSelectionChanged)="handleSelectionChange($event)"
+></selected-list>
+<button (click)="clearAll()">Clear All</button>
